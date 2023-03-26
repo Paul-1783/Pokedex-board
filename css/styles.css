@@ -1,0 +1,61 @@
+/* 
+Text-Color (black): #000;
+Primary Color(light blue): #aad4f3  
+Secondary Color(blueish black): #475865;
+Tertiary Color(blueish grey) :#7c97ab
+Quartiary Color(sea blue): #89b2d1;
+*/
+
+:root {
+    --black: #000;
+    --blueish_black: #475865;
+    --light_blue: #aad4f3;
+    --sea_blue: #89b2d1;
+    --blueish_grey: #7c97ab;
+    --heading-font-weight: 700;
+}
+
+body {
+    background-color: var(--light_blue);
+    color: var(--black);
+    font-family: "Cabin Sketch", ;
+    font-weight: 400;
+    font-style: oblique;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.flex_body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pokedex_title {
+    display: flex;
+    background-color: var(--blueish_grey);
+    outline: 3px solid var(--blueish_black);
+    font-size: 30px;
+    font-weight: var(--heading-font-weight);
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dex_container {
+    display: flex;
+    background-color: var(--sea_blue);
+    outline: 3px solid var(--blueish_black);
+    padding: 2% 0%;
+    margin: 0% auto;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
