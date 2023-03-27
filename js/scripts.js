@@ -17,13 +17,22 @@ let pokemonList = [
   },
 ];
 
-for (let i = 0; i < 3; ++i) {
-  if (pokemonList[i].height > 2.5) {
-    document.write(
-      `${pokemonList[i].name} (${pokemonList[i].height}) - Wow, that's big!`
-    );
+// for (let i = 0; i < 3; ++i) {
+//   if (pokemonList[i].height > 2.5) {
+//     document.write(
+//       `${pokemonList[i].name} (${pokemonList[i].height}) - Wow, that's big!`
+//     );
+//   } else {
+//     document.write(`${pokemonList[i].name} (${pokemonList[i].height})`);
+//   }
+//   document.write("<br><br>");
+// }
+
+pokemonList.forEach(function (item) {
+  if (item.height > 2.5) {
+    document.write(`${item.name} (${item.height}) - Wow, that's big!`);
   } else {
-    document.write(`${pokemonList[i].name} (${pokemonList[i].height})`);
+    document.write(`${item.name} (${item.height})`);
   }
   document.write("<br><br>");
-}
+});
