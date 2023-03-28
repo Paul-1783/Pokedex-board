@@ -21,13 +21,15 @@ let pokemonRepository = (function () {
   function verifyObject(pokemon) {
     if (typeof pokemon === "object") {
       let allProperties = Object.keys(pokemon);
-      console.log(allProperties);
       if (
         allProperties.indexOf("name") !== -1 &&
         allProperties.indexOf("height") !== -1 &&
         allProperties.indexOf("types") !== -1
       ) {
         return true;
+      } else {
+        console.log("Object doesn't possess all the required attributes.");
+        return false;
       }
     } else {
       console.log("Element you tried to add to pokemonlist wasn't an object.");
