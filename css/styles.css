@@ -13,12 +13,13 @@ Quartiary Color(sea blue): #89b2d1;
     --sea_blue: #89b2d1;
     --blueish_grey: #7c97ab;
     --heading-font-weight: 700;
+    --no_text-decoration: none;
 }
 
 body {
     background-color: var(--light_blue);
     color: var(--black);
-    font-family: "Cabin Sketch", ;
+    font-family: "Cabin Sketch", 'Times New Roman', Times, serif;
     font-weight: 400;
     font-style: oblique;
     font-size: 16px;
@@ -41,6 +42,7 @@ body {
     font-weight: var(--heading-font-weight);
     width: 30%;
     height: 20%;
+    margin: 0%;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -51,11 +53,47 @@ body {
     display: flex;
     background-color: var(--sea_blue);
     outline: 3px solid var(--blueish_black);
-    padding: 2% 0%;
-    margin: 0% auto;
+    padding: 0%;
+    margin: 0%;
     width: 30%;
     height: 30%;
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+.pokemon-list {
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.pokemon-button {
+    background-color: var(--blueish_black);
+    font-family: inherit;
+    font-size: 25px;
+    line-height: 1;
+    width: 100%;
+    margin: 3% auto;
+    padding: 7%;
+    border-radius: 3px;
+    border: 2px solid var(--black);
+    transition: 0.7s opacity;
+}
+
+button:hover,
+button:focus,
+.pokemon-button:hover,
+.pokemon-button:focus {
+    cursor: pointer;
+    opacity: 0.8;
+    border: 2px solid var(--light_blue);
+    color: var(--light_blue);
+}
+
+
+@media all and (max-width:500px) {
+    .pokemon-button {
+        margin: none;
+    }
 }
