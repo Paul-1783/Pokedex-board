@@ -134,7 +134,15 @@ let pokemonRepository = (function () {
     weightElement.innerText = "height: " + pokemon.height;
 
     let typesElement = document.createElement("p");
-    typesElement.innerText = "types: " + pokemon.types;
+    if (!pokemon.types[1]) {
+      typesElement.innerText = "types: " + pokemon.types[0].type.name;
+    } else {
+      typesElement.innerText =
+        "types: " +
+        pokemon.types[0].type.name +
+        ", " +
+        pokemon.types[1].type.name;
+    }
 
     modalBody.append(pokemonImage);
     modalBody.append(weightElement);
