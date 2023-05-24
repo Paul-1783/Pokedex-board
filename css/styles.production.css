@@ -26,7 +26,7 @@ Quartiary Color(sea blue): #89b2d1;
 body {
     background-color: var(--light_blue);
     color: var(--black);
-    font-family: "Cabin Sketch", 'Times New Roman', Times, serif;
+    font-family: "Cabin Sketch", "Times New Roman", Times, serif;
     font-weight: 400;
     font-style: oblique;
     font-size: 16px;
